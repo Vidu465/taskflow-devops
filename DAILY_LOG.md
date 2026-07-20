@@ -43,3 +43,11 @@ KodeKloud / Linux terminal labs + file handling + searching + redirection
 [lshw]                          → Shows detailed information about your computer's hardware.
 [update-alternatives] --display editor → Shows which text editor is currently selected as the default editor in Linux.
 [vi] and [vim]                  → advanced visual editor
+[:w]                            → save (write) file
+[:q]                            → Quit vim
+[:wq]                           → save and quit
+[:q!]                           → quit without saving
+[yy]                            →copy a line
+[dd]                            →delete
+[p]                             →paste
+[x]                             →delete a single character
