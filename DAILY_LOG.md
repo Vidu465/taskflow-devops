@@ -47,7 +47,13 @@ KodeKloud / Linux terminal labs + file handling + searching + redirection
 [:q]                            → Quit vim
 [:wq]                           → save and quit
 [:q!]                           → quit without saving
-[yy]                            →copy a line
-[dd]                            →delete
-[p]                             →paste
-[x]                             →delete a single character
+[yy]                            → copy a line
+[dd]                            → delete
+[p]                             → paste
+[x]                             → delete a single character
+[u]                             → undo the change
+[ctrl+r]                        → redo the change
+
+## Day 4 of Linux
+
+[echo] $SHELL → print default shell
