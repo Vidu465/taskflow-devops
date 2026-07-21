@@ -116,9 +116,23 @@ Number	Permissions
 644 → Regular text/configuration files (owner can edit, everyone can read).
 700 → Private files/directories (only the owner has access).
 770 → Shared team directories (owner and group have full access, others have none).
+
 [chown] → Change owner
 [chown -R] → Recursive (Goes inside every file and folder)
-→
-→
+[id] → Shows the information about the user
+
+sudo grep bob [/etc/sudoers] → Contains- Who can use sudo , What they can run , Which user has admin privileges
+sudo grep bob [/etc/shadow] → This file stores password-related information for Linux users.
+sudo grep bob [/etc/passwd] → User account information
+sudo grep bob [/etc/sudoers] → Check if Bob is directly allowed to use sudo.
+sudo grep "!" [/etc/shadow] → Find accounts with locked passwords.
+sudo grep root [/etc/passwd] → Shows root user information.
+grep nameserver [/etc/resolv.conf] → Find IP settings
+sudo grep PermitRootLogin [/etc/ssh/sshd_config] → Find SSH settings
+grep Port [/etc/ssh/sshd_config] → Find a port
+[useradd] → Create a new user account
+[passwd] → Change a user's password
+[groupadd] → Create a new linux group
+-s [/bin/sh] → Sets the login shell instead of the default
 →
 →
