@@ -134,5 +134,33 @@ grep Port [/etc/ssh/sshd_config] → Find a port
 [passwd] → Change a user's password
 [groupadd] → Create a new linux group
 -s [/bin/sh] → Sets the login shell instead of the default
+
+[dpkg] → It is used to install, remove, and manage .deb packages
+D = Debian
+P = Package
+K = Package
+G = (Manager)
+
+[apt] → Advanced package tool
+
+sudo dpkg -i [/root/firefox.deb] → Install the firefox package loacted at /root/firefox.deb
+## Example
+sudo apt-get update && sudo apt-get install firefox -y → 
+Command &	Purpose
+apt-get update	→ Refresh package list
+apt-get install firefox	→ Install Firefox
+&&	→ Run next command only if previous succeeds
+-y	→ Automatically answer "Yes"
+
+sudo apt remove [package_name] → Used to uninstall
+→
+→
+→
+→
+→
+→
+→
+→
+→
 →
 →
