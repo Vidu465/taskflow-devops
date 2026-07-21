@@ -57,3 +57,27 @@ KodeKloud / Linux terminal labs + file handling + searching + redirection
 ## Day 4 of Linux
 
 [echo] $SHELL → print default shell
+[chsh] → Change Shell  (bash,zsh,sh,fish)
+[grep] →search for text   [^] → starts with [bob]→ Username [:]→ followed by a colon
+[/etc/passwd]→ The file that stores user account information
+[$TERM]→ Shows the type of terminal you are currently using
+[~]→Home directory
+[.profile]→ User startup configuration file
+[export] → Create environment variable (becomes available to programs started from the shell)
+[alias]→ Create shortcut
+[source]→ Reload configuration
+[echo 'export MY_VARIABLE="example_value"' >> ~/.profile]  → Adding an environment variable
+
+## Create a new variable called [PROJECT=MERCURY]
+## [Answer] → echo 'export PROJECT=MERCURY"' >> ~/.profile
+
+## Add alias up=uptime
+## alias [shortcut=command]
+echo 'alias up=uptime' >> ~/.profile 
+source ~/.profile → make it permanent
+
+echo [$PS1] → Special Shell variable shows current prompt settings
+[\d] →Date
+[\u] → Username
+[\h] → Hostname
+[\w] → Current directory
