@@ -56,16 +56,16 @@ KodeKloud / Linux terminal labs + file handling + searching + redirection
 
 ## Day 4 of Linux
 
-[echo] $SHELL → print default shell
-[chsh] → Change Shell  (bash,zsh,sh,fish)
-[grep] →search for text   [^] → starts with [bob]→ Username [:]→ followed by a colon
-[/etc/passwd]→ The file that stores user account information
-[$TERM]→ Shows the type of terminal you are currently using
-[~]→Home directory
-[.profile]→ User startup configuration file
-[export] → Create environment variable (becomes available to programs started from the shell)
-[alias]→ Create shortcut
-[source]→ Reload configuration
+[echo] $SHELL   → print default shell
+[chsh]          → Change Shell  (bash,zsh,sh,fish)
+[grep]          → earch for text   [^] → starts with [bob]→ Username [:]→ followed by a colon
+[/etc/passwd]   → The file that stores user account information
+[$TERM]         → Shows the type of terminal you are currently using
+[~]             → Home directory
+[.profile]      → User startup configuration file
+[export]        → Create environment variable (becomes available to programs started from the shell)
+[alias]         → Create shortcut
+[source]        → Reload configuration
 [echo 'export MY_VARIABLE="example_value"' >> ~/.profile]  → Adding an environment variable
 
 ## Create a new variable called [PROJECT=MERCURY]
@@ -77,7 +77,48 @@ echo 'alias up=uptime' >> ~/.profile
 source ~/.profile → make it permanent
 
 echo [$PS1] → Special Shell variable shows current prompt settings
-[\d] →Date
-[\u] → Username
-[\h] → Hostname
-[\w] → Current directory
+[\d]   → Date
+[\u]   → Username
+[\h]   → Hostname
+[\w]   → Current directory
+
+## Day 5 of Linux
+
+[ls] → List files and directories       [-l] → Show the long listing format  
+[ls -ld /home/bob/sports]   → Shows information about the directory itself, not what's inside it.
+[r] → Read
+[w] → Write
+[x] → Execute (or enter the directory)
+
+drwxr-x---
+││││││││││
+││││││││└── Others → --- = No access
+││││└────── Group  → r-x = Read + Execute
+│└───────── Owner  → rwx = Read + Write + Execute
+└────────── d = Directory
+
+[chmod] → Change Mode (Change file/directory permission)
+
+## 755 → Octal number
+
+Owner  = 7 = rwx (Read,Write,Execute)
+Group  = 5 = r-x (Read,Execute)
+Others = 5 = r-x (Read,Execute)
+
+Number	Permissions
+7	rwx
+6	rw-
+5	r-x
+4	r--
+0	---
+
+755 → Directories, shell scripts, executable programs.
+644 → Regular text/configuration files (owner can edit, everyone can read).
+700 → Private files/directories (only the owner has access).
+770 → Shared team directories (owner and group have full access, others have none).
+[chown] → Change owner
+[chown -R] → Recursive (Goes inside every file and folder)
+→
+→
+→
+→
