@@ -153,14 +153,21 @@ apt-get install firefox	→ Install Firefox
 -y	→ Automatically answer "Yes"
 
 sudo apt remove [package_name] → Used to uninstall
-→
-→
-→
-→
-→
-→
-→
-→
+
+## Day 6 of Linux
+## It is used in CentOS 9
+[rpm] →  Red Hat Package Manager (CentOS , Red Hat Enterprise)
+[yum] → Yellowdog Updater Modified 
+[ssh] → Secure Shell
+rpm -qa | grep wget → [-q] → Query      [-a] → All  [|] → Pipe
+[wget] → This is the word to search for
+
+## Installation process
+sudo rpm -ivh /home/bob/firefox-x11-140.8.0-2.el9.x86_64.rpm
+[-v] → Verbose mode (Shows more detailed information during installation.)
+[-h] → Show hash marks (#) as a progress bar
+[-e] → Removes package 
+[repolist] → Repository List
 →
 →
 →
