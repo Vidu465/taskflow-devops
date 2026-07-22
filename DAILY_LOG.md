@@ -191,11 +191,41 @@ sudo crontab [-l] → Shows jobs belonging to root.
 * * * * * command
 
 [*] → Add for everything
-→
-→
-→
-→
-→
+
+## Linux Networking
+
+[ip a] → Show all network interfaces and their IP addresses.
+[inet] → There are two common address types  [ipv4] and [ipv6]
+[ip link] → Shows interfaces only (their status and hardware details)
+[ip r] → It displays the routing table of your Linux system.
+[ip route add] → Is used to manually add a new route to the Linux routing table.
+
+## Example → sudo ip route add <destination-network> via <gateway-IP> dev <interface>
+## Answer →  sudo ip route add 10.10.0.0/24 via 192.168.1.1 dev eth0
+
+Gateway: [0.0.0.0] → No gateway is needed. The destination network is directly connected to this machine.
+
+Gateway = 0.0.0.0
+        ↓
+Directly connected network
+
+Gateway = IP address
+        ↓
+Send traffic through a router
+
+## Permanent 
+
+ip route add
+        ↓
+Temporary
+        ↓
+Gone after reboot
+
+/etc/network/interfaces
+        ↓
+Permanent
+        ↓
+Survives reboot
 →
 →
 →
