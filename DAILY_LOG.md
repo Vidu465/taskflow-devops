@@ -168,6 +168,36 @@ sudo rpm -ivh /home/bob/firefox-x11-140.8.0-2.el9.x86_64.rpm
 [-h] → Show hash marks (#) as a progress bar
 [-e] → Removes package 
 [repolist] → Repository List
+[provides] → It searches repositories to find the package that provides a particular command/file.
+[tcpdump] → Is a network packet analyzer tool used to capture and inspect network traffic.
+
+## crontab →  Used to manage scheduled tasks (cron jobs) in Linux.  Run commands automatically
+Run a backup every day at 2 AM
+Restart a service every Monday
+Clean temporary files every hour
+
+crontab [-l] → Show all scheduled tasks for the current user.
+crontab [-e] → Open the user's cron file in an editor.
+crontab [-r] → Delete the entire crontab file for the current user.
+crontab [-i] → Ask for confirmation before deleting the crontab.
+sudo crontab [-l] → Shows jobs belonging to root.
+
+──────── [minute] (0-59)
+│ ┌────── [hour] (0-23)
+│ │ ┌──── day of month (1-31)
+│ │ │ ┌── [month] (1-12)
+│ │ │ │ ┌ day of week (0-7)
+│ │ │ │ │
+* * * * * command
+
+[*] → Add for everything
 →
 →
 →
+→
+→
+→
+→
+→
+→
+
