@@ -226,8 +226,28 @@ Gone after reboot
 Permanent
         ↓
 Survives reboot
+
+## Day 7 of learning Linux
+
+[/etc/resolv.conf]      → Which DNS server should I use
+[/etc/hosts]            → Local hostname-to-IP mappings
+[/etc/hostname]         → Computer hostname
+[/etc/fstab]            → Mount disks automatically
+[/etc/sudoers]          → Sudo permissions
+[/etc/environment]      → Environment variables
+[/etc/ssh/sshd_config]  → SSH server configuration
+
+├── etc   ← Configuration files
+├── home  ← User home directories
+
+
 →
 →
 →
 →
+→
+→
+→
+→
+
 
