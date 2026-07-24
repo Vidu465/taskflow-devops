@@ -236,17 +236,30 @@ Survives reboot
 [/etc/sudoers]          → Sudo permissions
 [/etc/environment]      → Environment variables
 [/etc/ssh/sshd_config]  → SSH server configuration
+[/etc/nsswitch.conf]    → This is the Name Service Switch configuration file.  (User accounts , Groups , Hostnames , IP addresses)
 
 ├── etc   ← Configuration files
 ├── home  ← User home directories
 
+[man] [5] resolv.conf   → The 5 tells man to show the file format and configuration documentation (section 5 of the manual), which is very      useful for learning Linux configuration files.
 
-→
-→
-→
-→
-→
-→
+## Linux SSH & SCP
+
+[SSH] Port → 22
+[ssh-keygen] → SSH Key Generator
+It creates a pair of cryptographic keys:
+
+Private key 🔴 (keep secret)
+Public key 🟢 (share with servers)
+These keys are used for secure authentication instead of passwords.
+
+ssh-keygen -t rsa       → [-t] → Type of key        [rsa] → RSA is a type of encryption algorithm used to create SSH keys.
+
+Your identification has been saved in /home/bob/.ssh/[id_rsa]    → Private Key
+Your public key has been saved in /home/bob/.ssh/[id_rsa.pub]    → Public Key
+
+[ssh-copy-id] → Is a command used to copy your public SSH key to a remote server.
+[authorized_keys] → This file contains the public keys that are allowed to log in to this user account.
 →
 →
 
