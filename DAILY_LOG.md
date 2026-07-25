@@ -260,7 +260,102 @@ Your public key has been saved in /home/bob/.ssh/[id_rsa.pub]    → Public Key
 
 [ssh-copy-id] → Is a command used to copy your public SSH key to a remote server.
 [authorized_keys] → This file contains the public keys that are allowed to log in to this user account.
+[scp] → Secure Copy Protocol ,  It is used to transfer files between computers securely.
+
+## Linux Storage
+
+/dev/sda   → First hard disk
+/dev/sdb   → Second hard disk
+/dev/vde   → Fifth virtual disk
+/dev/vdf   → Sixth virtual disk
+
+[pv] → Physical Volume
+[vg] → Volume group
+[lv] → Logical volume
+[lvm] →Logical volume manager
+
+# Term	           Full Form	            Simple Meaning
+[/dev/vde]	       Device	                A physical disk
+[/dev/vdf]	       Device	                Another physical disk
+[PV]	           Physical Volume	        A disk prepared for LVM
+[VG]	           Volume Group	            A big storage pool made from one or more PVs
+[LV]               Logical Volume	        A usable "virtual partition" created from a VG
+[lvs]	           List Logical Volumes	    Command to display existing logical volumes
+
+[pvcreate] → Physical Volume Create
+[pvdisplay] → Display the created physical volumes
+[lvcreate] → logical volume create     [-L 1G] → specifies the size of the logical volume.     [-n] → specifies the name of the logical volume.
+[mkfs] → Make file systems
+[ext4] → File types        (ext4 , xfs , btrfs)
+[mount] → Mount 
+[lvresize] → Logical Volume Resize
+
+[gdisk] → GPT Disk Partition tool.   [n] → New partition   [w] → Write the partition table to disk.
+
+## Linux storage filesystem
+
+Run: sudo df -h →   [df] → Disk Filesystem          [-h] → Human-redable
+It shows:
+
+Mounted filesystems
+Their sizes
+Free space
+Mount points
+
+Run: sudo [blkid] /dev/vdd → Block ID
+It displays information about a block device, such as:
+
+Filesystem type
+UUID
+Label
+Partition UUID
+
+Think of it as an ID card for a disk or partition.
+
+## Linux systemd services
+
+[systemctl] → System Control        (It is the command used to manage systemd services.)
+
+systemd is the service manager used by most modern Linux distributions like:
+→ Ubuntu
+→ CentOS
+
+It controls things like: 
+Web servers
+Databases
+SSH
+Docker
+Cron
+Networking services
+
+[status] → Show me the current condition of this service.
+sudo systemctl [start] sample.service    → Starts the service immediately.
+sudo systemctl [stop] sample.service     → Stops
+sudo systemctl [restart] sample.service  → Stops and starts it again.  
+sudo systemctl [enable] sample.service   → Start this service automatically when Linux boots.
+sudo [journalctl] -u sample.service      → Journal Control used to view logs collected by systemd's journal service.    [-u] → Units
+
+## Linux IPT Tables (Firewall)
+
+ssh bob@devapp01 →  [ssh] → Secure Shell        [bob@devapp01] → username @ server-name
+sudo -s → Start a root shell
 →
 →
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+
+
+
 
 
