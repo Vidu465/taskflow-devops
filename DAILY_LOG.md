@@ -387,18 +387,81 @@ iptables -L -v → Verify the rules
 
 ## Linux Troubleshooting
 
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
+[scp] → Secure Copy
+# copying a file from one Linux machine to another.
+scp caleston-code.tar.gz bob@devapp01:~/
 
+# extract a compressed archive, and verify the files.
+sudo tar [-C] /opt/ [-xvf] caleston-code.tar.gz  →  [tar] → Tape Archive  [-C] → Change directory  [-xvf] → Extract , Verbose(what files are being extracted) , File
 
+# remove the archive file after extracting it.
+rm [-rf] caleston-code.tar.gz → [rm] → Remove  [-r] → Recursive (Deleting directories and everything inside) [-f] → Force
 
+# connect to the database server (devdb01) and check whether the PostgreSQL database service is running.
+[ssh] bob@devdb01
+sudo [systemctl] status postgresql.service 
+
+# modify PostgreSQL's client authentication configuration file
+ [vi] /etc/postgresql/16/main/pg_hba.conf →
+host all all 0.0.0.0/0 md5 → [host] → Allow connections over TCP/IP network. [all] → Allow access to all databases [all] → All postgreSQL users
+[0.0.0.0/0] → Allow connections from any IPv4 address. [md5] → The user must provide a password.
+
+# check whether PostgreSQL is actively listening for network connections on its default port (5432).
+sudo netstat [-natulp] | [grep] postgres | [grep] LISTEN    → [netstat] → Network Statistics(Ports,network connections,services)
+-n → Show numeric IPs and ports.
+-a → Show all connections.
+-t → Include TCP connections.
+-u → Include UDP connections.
+-l → Show only listening services.
+-p → Show which program owns each port.
+
+# Start the Django application
+python3 manage.py runserver 0.0.0.0:8000    → [manage.py] → Django's command-line utility. (start server,database migrations)
+[0.0.0.0] → Listen to all network interfaces  [8000] → Django's default development port
+
+# why the Django application failed to start
+Django application → devapp01
+PostgreSQL         → devdb01
+# BUT
+Database Host: localhost
+Database Port: 5433
+
+# Find where the database configuration is
+grep -[ir] "DATABASES = {" /opt/caleston-code/ → [-i] → Ignore uppercase and lowercase differences.  [-r] → Recursive search
+
+sudo vi /opt/caleston-code/mercuryProject/mercury/settings.py → 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mercurydb',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'devdb01',
+        'PORT': '5432',
+    }
+}
+
+# change the owner of every file and directory inside /opt/caleston-code to the user mercury.
+chown [-R] mercury /opt/caleston-code →   [chown] → Change owner
+
+# Activate the Python virtual environment
+source ../venv/bin/activate →    [source] → runs a script inside the current terminal session.
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
 
 
