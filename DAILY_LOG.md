@@ -335,15 +335,58 @@ sudo systemctl [restart] sample.service  → Stops and starts it again.
 sudo systemctl [enable] sample.service   → Start this service automatically when Linux boots.
 sudo [journalctl] -u sample.service      → Journal Control used to view logs collected by systemd's journal service.    [-u] → Units
 
-## Linux IPT Tables (Firewall)
+## Linux IPTables (Firewall)
 
 ssh bob@devapp01 →  [ssh] → Secure Shell        [bob@devapp01] → username @ server-name
-sudo -s → Start a root shell
-→
-→
-→
-→
-→
+sudo -s                     → Start a root shell
+sudo apt install iptables   → Install iptables
+apt update                  → It downloads the latest package information from repositories.
+
+# Complete workflow
+Bob Laptop
+    |
+    |
+    +---- [SSH] ----> devapp01
+    |                  |
+    |                  sudo -s
+    |                  apt update
+    |                  apt install iptables
+    |                  iptables --version
+    |
+    |
+    +---- [SSH] ----> devdb01
+                       |
+                       sudo -s
+                       apt update
+                       apt install iptables
+                       iptables --version
+
+iptables -L → Show me all the current firewall rules.
+
+# INPUT
+↓
+Traffic coming INTO the server
+
+# OUTPUT
+↓
+Traffic leaving the server
+
+# FORWARD
+↓
+Traffic passing THROUGH the server
+
+# Question - iptables [-A] INPUT [-p] tcp [-s] 10.244.25.242 [--dport] 22 [-j] ACCEPT    
+→ [-A] → Append  [INPUT] → Incoming traffic [-p] → Protocol (tcp)
+[-s] → Source IP Address [--dport] → Destination Port [-j] → Jump (what action to take) [ACCEPT] → Allow the packet.
+
+# Question - iptables [-A] INPUT [-p] tcp [-s] 10.244.25.242 [--dport] 80 [-j] ACCEPT
+
+# Port 22 is TCP SSH and Port 80 is TCP HTTP
+
+iptables -L -v → Verify the rules
+
+## Linux Troubleshooting
+
 →
 →
 →
