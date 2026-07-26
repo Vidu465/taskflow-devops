@@ -691,3 +691,56 @@ Used for checking permissions and hidden files.
 
 File ownership:
 Important when managing Linux services and applications.
+
+
+
+
+
+
+## --------------- Git & GitHub --------------------
+
+# What is Git?
+Git = A Version Control System (VCS).
+Tracks every change made to your project.
+Lets you save versions (commits), work with branches, and restore older versions.
+Works locally on your computer.
+
+Think of Git as a game save system.
+
+Version 1 → Version 2 → Version 3
+
+# What is GitHub?
+GitHub = A cloud website that stores Git repositories.
+Used for collaboration with teams.
+Stores branches, Pull Requests, Issues, CI/CD workflows, etc.
+
+# Git Workflow
+Create Project
+      ▼
+git clone
+      ▼
+Create Branch
+      ▼
+Write Code
+      ▼
+git add
+      ▼
+git commit
+      ▼
+git push
+      ▼
+Pull Request
+      ▼
+Code Review
+      ▼
+Merge
+      ▼
+main Branch
+      ▼
+GitHub Actions
+      ▼
+CI/CD Pipeline
+      ▼
+Docker Build
+      ▼
+Deploy
