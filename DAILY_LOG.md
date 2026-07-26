@@ -446,22 +446,248 @@ chown [-R] mercury /opt/caleston-code →   [chown] → Change owner
 
 # Activate the Python virtual environment
 source ../venv/bin/activate →    [source] → runs a script inside the current terminal session.
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
-→
 
 
+
+
+## Practiced Linux puzzels (overthewire) Bandit
+
+# OverTheWire Bandit Level 0 - 10 Linux Notes
+
+## Level 0 → Level 1: SSH Login
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Explanation:
+- ssh: Connect to a remote Linux server securely.
+- username@host: Specifies the user and server.
+- [-p]: Specifies the SSH port.
+
+Learned:
+How to connect to remote Linux machines using SSH.
+
+## Level 1 → Level 2: Reading a File Named "-"
+
+cat ./-
+
+Explanation:
+- [cat] : Displays the contents of a file.
+- [./]  : Refers to the current directory.
+- [-]   : The filename.
+
+Note:
+The filename "-" is treated as a special character by Linux, so ./ is used to specify that it is a file.
+
+Learned:
+How to handle files with special characters.
+
+## Level 2 → Level 3: Reading Files With Spaces
+
+cat -- "--spaces in this filename--"
+
+Explanation:
+- Quotes (" ") allow Linux to treat spaces as part of the filename.
+- -- tells the command to stop reading options and treat the next value as a filename.
+
+Learned:
+How to access files with spaces and special characters in their names.
+
+## Level 3 → Level 4: Finding Hidden Files
+
+cd inhere
+ls -la
+cat ...Hiding-From-You
+
+Explanation:
+- cd: Changes the current directory.
+- ls: Lists files and folders.
+- ls -la:
+  - -l shows detailed information.
+  - -a shows hidden files.
+
+Hidden files start with a dot:
+
+.config
+
+Learned:
+How to locate hidden files in Linux.
+
+## Level 4 → Level 5: Finding Human Readable Files
+
+file ./-file*
+file ./-file* | grep text
+
+Explanation:
+- file: Shows the type of a file.
+- *: Wildcard that matches multiple files.
+- grep: Searches for specific text.
+
+Example:
+
+
+means the file contains readable text.
+
+Learned:
+How to identify file types and find useful files.
+
+## Level 5 → Level 6: Searching Files By Size
+
+
+find . -type f -size 1033c
+
+Explanation:
+- find: Searches for files.
+- . : Searches from the current directory.
+- -type f: Searches only normal files.
+- -size 1033c: Finds files with exactly 1033 bytes.
+
+Learned:
+How to search files using specific conditions.
+
+## Level 6 → Level 7: Searching Files By User, Group and Size
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+Explanation:
+- /: Searches the entire Linux filesystem.
+- -user: Finds files owned by a specific user.
+- -group: Finds files belonging to a specific group.
+- -size: Searches files based on size.
+- 2>/dev/null: Hides permission error messages.
+
+Learned:
+Linux file ownership, groups and permissions.
+
+## Level 7 → Level 8: Searching Text Inside Files
+
+grep millionth data.txt
+
+Explanation:
+- grep: Searches for text inside files.
+- millionth: The word being searched.
+- data.txt: The file being searched.
+
+Learned:
+How to quickly search large files.
+
+## Level 8 → Level 9: Finding Unique Lines
+
+sort data.txt | uniq -u
+
+Explanation:
+- sort: Sorts lines alphabetically.
+- | (pipe): Sends the output of one command to another command.
+- uniq: Removes duplicate lines.
+- uniq -u: Shows only lines that appear once.
+
+Learned:
+How to combine Linux commands using pipes.
+
+## Level 9 → Level 10: Extracting Readable Text From Binary Files
+
+strings data.txt | grep =
+
+Explanation:
+- strings: Extracts readable text from binary files.
+- grep =: Searches for lines containing "=".
+
+Learned:
+How to inspect binary files and extract useful information.
+
+# Important Linux Commands Learned
+
+## Navigation
+
+pwd
+Shows the current directory.
+
+ls
+Lists files and folders.
+
+cd
+Changes directories.
+
+
+## File Reading
+
+cat
+Displays file contents.
+
+file
+Shows file type.
+
+strings
+Extracts readable text from binary files.
+
+## Searching
+
+find
+Searches for files based on conditions.
+
+grep
+Searches text inside files.
+
+## Linux Concepts Learned
+
+Hidden files:
+Files starting with "." are hidden.
+
+Example:
+.config
+
+Special filenames:
+Use ./ or -- when filenames contain special characters.
+
+Example:
+
+cat ./-
+cat -- "-file"
+```
+
+Wildcard:
+* matches multiple files.
+
+Example:
+```bash
+ls *.txt
+```
+
+Pipe:
+Connects multiple commands.
+
+Example:
+```bash
+cat file.txt | grep password
+```
+
+Redirect errors:
+2>/dev/null
+
+
+Hides error messages.
+
+# DevOps Relevance
+
+SSH:
+Used to connect and manage remote servers.
+
+grep:
+Used for searching logs and troubleshooting issues.
+
+find:
+Used to locate configuration files and system files.
+
+cat:
+Used to read configuration files.
+
+strings:
+Used for inspecting unknown files.
+
+sort and uniq:
+Used for analysing logs and finding patterns.
+
+ls -la:
+Used for checking permissions and hidden files.
+
+File ownership:
+Important when managing Linux services and applications.
