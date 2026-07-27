@@ -772,3 +772,6 @@ git config --list	   |     Show Git settings
 docker compose up	   |     Start the application
 docker compose up --build	Rebuild and start the application
 docker compose down	   |     Stop the application
+
+
+## AWS Networking basics
