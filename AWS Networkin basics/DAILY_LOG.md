@@ -89,3 +89,80 @@ Why?
 
 If one AZ fails, another can keep your application running.
 Improves reliability and availability.
+
+
+
+
+
+# AWS Cloud Practitioner – Module 2 Summary
+
+[multitenancy] → sharing underlying hardware between virtual machines
+[hypervisor]   → software running on the host machine to keep isolation
+
+
+# AWS Cloud Practitioner – Module 2 Summary (Simple)
+
+# Amazon EC2 🖥️
+EC2 (Elastic Compute Cloud) is a virtual server in AWS.
+It is used to run websites, applications, and databases.
+
+# EC2 Instance Types ⚙️
+
+# AWS provides different instance types for different needs:
+
+General Purpose – Balanced performance
+Compute Optimized – More CPU
+Memory Optimized – More RAM
+Storage Optimized – Faster storage
+
+# Provisioning AWS Resources 🚀
+
+Provisioning means creating and setting up AWS resources.
+
+# You can create resources using:
+
+AWS Management Console
+AWS CLI
+AWS SDK
+
+# EC2 Pricing 💰
+
+ AWS offers different pricing options:
+
+On-Demand – Pay only when you use it
+Reserved Instances – Lower cost with long-term commitment
+Spot Instances – Cheapest option using unused AWS capacity
+Savings Plans – Save money by committing to usage
+
+# Auto Scaling 
+
+Auto Scaling automatically adds or removes EC2 instances based on traffic.
+
+Benefits:
+
+Handles high traffic
+Reduces cost
+Improves availability
+
+# Elastic Load Balancing (ELB) ⚖️
+
+A Load Balancer distributes incoming traffic across multiple EC2 instances.
+
+Benefits:
+
+Prevents server overload
+Improves performance
+Increases reliability
+
+# Amazon SNS 📢
+
+Simple Notification Service (SNS) sends notifications through:
+
+Email
+SMS
+Mobile push
+Other AWS services
+
+# Amazon SQS 📩
+
+Simple Queue Service (SQS) stores messages in a queue so applications can communicate reliably without depending on each other.
