@@ -324,3 +324,139 @@ Automates infrastructure deployment
 Saves time
 Reduces human errors
 Creates consistent environments
+
+
+
+# AWS Cloud Practitioner – Module 5 Summary.
+
+
+# 1. Amazon VPC (Virtual Private Cloud) 🌐
+
+A VPC is a private, isolated network inside AWS.
+It allows you to control your AWS resources' networking.
+You decide:
+IP addresses
+Subnets
+Security rules
+Connections
+
+# 2. Subnets 📂
+
+A subnet is a smaller section inside a VPC.
+Used to organize resources.
+
+Types:
+
+Public Subnet → Resources can access the internet.
+Private Subnet → Resources are isolated from direct internet access.
+
+# 3. Gateways 🚪
+
+# Internet Gateway (IGW)
+
+Connects a VPC to the public internet.
+Allows public traffic to access resources in the VPC.
+
+# Virtual Private Gateway (VGW)
+
+Connects a VPC to a private network.
+Used with VPN or Direct Connect for hybrid cloud.
+
+# NAT Gateway
+
+Allows resources in a private subnet to access the internet.
+Prevents outside users from initiating connections to private resources.
+
+# 4. Security in VPC 🔒
+
+# Security Groups
+
+Firewall at the EC2 instance level.
+Controls inbound and outbound traffic.
+Allow rules only.
+Stateful (remembers connections).
+
+# Network ACLs (NACLs)
+
+Firewall at the subnet level.
+Controls inbound and outbound traffic.
+Supports Allow and Deny rules.
+Stateless.
+
+# 5. Connecting to AWS 🔗
+
+# AWS Client VPN 👤
+
+For remote employees.
+Securely connects users to AWS resources.
+
+Example:
+
+Employee working from home → AWS
+
+
+# AWS Site-to-Site VPN 🏢
+
+Connects company offices/data centers to AWS.
+Uses encrypted VPN connections.
+
+Example:
+
+Company network → AWS VPC
+
+# AWS Direct Connect ⚡
+
+Dedicated private connection between a company network and AWS.
+Used for high bandwidth and consistent performance.
+
+# AWS PrivateLink 🔐
+
+Provides private access between VPCs and AWS services.
+Keeps traffic inside AWS network.
+
+
+# 6. DNS and Traffic Management 🌍
+
+# DNS
+Converts domain names into IP addresses.
+
+Example:
+
+google.com → 142.250.x.x
+
+# Amazon Route 53
+
+AWS DNS service.
+[Provides:]
+Domain registration
+DNS routing
+Health checks
+Traffic policies
+
+# Amazon CloudFront 🚀
+
+AWS Content Delivery Network (CDN).
+Uses Edge Locations to deliver content faster.
+
+Benefits:
+
+Lower latency
+Faster websites
+Secure content delivery
+
+# AWS Global Accelerator 🌎
+
+Improves application availability and performance worldwide.
+Routes users to the best available endpoint.
+
+# 7. Other Networking Services
+
+# Transit Gateway
+
+Connects multiple VPCs and on-premises networks.
+Works like a central network hub.
+
+# API Gateway
+
+Creates, manages, and secures APIs.
+Handles API requests between applications and backend services.
