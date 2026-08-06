@@ -166,3 +166,109 @@ Other AWS services
 # Amazon SQS 📩
 
 Simple Queue Service (SQS) stores messages in a queue so applications can communicate reliably without depending on each other.
+
+
+
+
+# AWS Cloud Practitioner – Module 3 Summary.
+
+# 1. Amazon EC2 🖥️
+
+Provides virtual servers in AWS.
+Gives full control over the operating system, software, and configuration.
+Best when you need maximum control.
+
+# 2. AWS Lambda ⚡
+
+Serverless compute service.
+Runs your code without managing servers.
+AWS manages infrastructure, scaling, and servers.
+Best for event-driven applications and short tasks.
+
+# 3. Containers 📦
+
+Containers package an application and its dependencies together so it runs consistently everywhere.
+
+# Benefits:
+
+Easy deployment
+Same environment in development and production
+Faster scaling
+
+# 4. Amazon ECS 🚢
+
+# Elastic Container Service
+
+AWS-managed container orchestration service.
+Helps deploy, manage, and scale containers.
+Easier alternative to managing containers manually.
+
+# 5. Amazon EKS ☸️
+
+# Elastic Kubernetes Service
+
+Managed Kubernetes service on AWS.
+AWS manages the Kubernetes control plane.
+Used for large-scale container applications.
+
+# 6. AWS Fargate 🚀
+
+Serverless compute engine for containers.
+Runs containers without managing servers.
+Works with ECS and EKS.
+
+Simple idea:
+
+ECS/EKS manage containers, Fargate runs them without servers.
+
+# 7. AWS Elastic Beanstalk 🌱
+
+Deploy and manage web applications easily.
+AWS handles infrastructure, scaling, and deployment.
+Good for developers who don't want to manage servers.
+
+
+# 8. AWS Batch 🧪
+
+Runs large-scale batch computing jobs.
+Automatically schedules and scales compute resources.
+
+Examples:
+
+Scientific simulations
+Data processing
+Machine learning workloads
+
+
+# 9. Amazon Lightsail 💡
+
+Simple cloud platform with predictable pricing.
+Provides:
+Virtual servers
+Containers
+Databases
+
+Best for:
+
+Small websites
+Simple applications
+Beginners
+
+
+# 10. AWS Outposts 🏢
+
+Brings AWS infrastructure and services to your own data center.
+Used for hybrid cloud environments.
+Useful when companies need local data processing.
+
+
+# AWS                       Service	Purpose
+EC2	                        Virtual servers you manage.
+Lambda	                    Runs code without managing servers.
+ECS	                        Runs and manages Docker containers.
+EKS	                        Runs and manages Kubernetes clusters.
+Fargate	                    Runs containers without managing servers (works with ECS or EKS).
+Elastic Beanstalk          	Deploys web applications automatically.
+AWS Batch	                  Runs large-scale batch jobs.
+Lightsail	                  Simple virtual private servers (VPS) for beginners.
+Outposts	                  Brings AWS services to your own on-premises data center.
