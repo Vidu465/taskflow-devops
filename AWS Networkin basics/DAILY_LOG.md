@@ -272,3 +272,55 @@ Elastic Beanstalk          	Deploys web applications automatically.
 AWS Batch	                  Runs large-scale batch jobs.
 Lightsail	                  Simple virtual private servers (VPS) for beginners.
 Outposts	                  Brings AWS services to your own on-premises data center.
+
+
+
+
+# AWS Cloud Practitioner – Module 4 Summary.
+
+# 1. AWS Global Infrastructure 🌍
+
+AWS has a worldwide network of infrastructure, including:
+
+Regions – Geographic locations (e.g., Mumbai, Singapore).
+Availability Zones (AZs) – Multiple isolated data centers within a Region.
+Edge Locations – Locations closer to users that deliver content faster.
+
+Purpose:
+
+High availability
+Fault tolerance
+Low latency
+Global reach
+
+# 2. Choosing an AWS Region 📍
+
+When selecting a Region, consider:
+
+✅ Compliance – Data residency and legal requirements.
+✅ Proximity to customers – Lower latency and better performance.
+✅ Service availability – Not all AWS services are available in every Region.
+✅ Pricing – Costs can vary between Regions.
+
+# 3. Edge Locations ⚡
+
+Edge locations are part of the AWS global network and are used to deliver content closer to users.
+
+Benefits:
+
+Faster content delivery
+Lower latency
+Better user experience
+
+# 4. AWS CloudFormation 📜
+
+CloudFormation is an Infrastructure as Code (IaC) service.
+
+Instead of creating AWS resources manually, you write a template (YAML or JSON), and CloudFormation creates them automatically.
+
+Benefits:
+
+Automates infrastructure deployment
+Saves time
+Reduces human errors
+Creates consistent environments
