@@ -677,3 +677,44 @@ Q Developer → Developers
 | **Athena**            | SQL queries on data, especially S3      |
 | **QuickSight**        | Dashboards & data visualization         |
 | **OpenSearch**        | Search + real-time analytics/monitoring |
+
+
+
+# AWS Cloud Practitioner – Security Module 9 Summary.
+
+# 👤 Identity & Access
+
+| Service                 | Remember                              |
+| ----------------------- | ------------------------------------- |
+| **IAM**                 | Manage users, roles & permissions     |
+| **IAM Identity Center** | Employee **SSO** / centralized access |
+| **Secrets Manager**     | Store passwords, API keys & secrets   |
+| **Systems Manager**     | Manage servers/nodes at scale         |
+
+
+# Key concept
+
+Authentication = Who are you?
+Authorization = What can you access?
+Least privilege = Give only the permissions needed.
+
+
+# 🛡️ Protection & Encryption
+
+| Service                           | Remember                                               |
+| --------------------------------- | ------------------------------------------------------ |
+| **AWS Shield**                    | Protect against **DDoS attacks**                       |
+| **AWS WAF**                       | Protect web applications by filtering unwanted traffic |
+| **AWS KMS**                       | Create/manage **encryption keys**                      |
+| **Amazon Macie**                  | Discover/protect **sensitive data in S3**              |
+| **AWS Certificate Manager (ACM)** | Manage **SSL/TLS certificates**                        |
+
+
+# 🔍 Security Detection & Monitoring
+
+| Service              | Remember                               |
+| -------------------- | -------------------------------------- |
+| **Amazon Inspector** | Find **vulnerabilities**               |
+| **Amazon GuardDuty** | Detect **threats/suspicious activity** |
+| **Amazon Detective** | **Investigate** security incidents     |
+| **AWS Security Hub** | **Centralize security findings**       |
