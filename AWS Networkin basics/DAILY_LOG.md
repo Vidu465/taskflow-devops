@@ -619,3 +619,61 @@ Person → WORKS_AT → Company
 Company → LOCATED_IN → Country
 
 Neptune = Relationships/connections
+
+
+
+# AWS Cloud Practitioner – AI, ML & Data Analytics Module 8 Summary.
+
+# 🤖 AI Services
+
+| Service         | Remember                              |
+| --------------- | ------------------------------------- |
+| **Comprehend**  | Understand/analyze text               |
+| **Polly**       | Text → Speech 🔊                      |
+| **Transcribe**  | Speech → Text 🎙️                     |
+| **Translate**   | Translate languages 🌍                |
+| **Kendra**      | Intelligent enterprise search 🔎      |
+| **Rekognition** | Analyze images/videos 👁️             |
+| **Textract**    | Extract text/data from documents 📄   |
+| **Lex**         | Build chatbots/conversational apps 💬 |
+| **Personalize** | Personalized recommendations 🎯       |
+
+
+# 🧠 Machine Learning & Generative AI
+
+| Service                 | Remember                                        |
+| ----------------------- | ----------------------------------------------- |
+| **SageMaker AI**        | Build, train & deploy ML models                 |
+| **SageMaker JumpStart** | Deploy pre-trained ML models easily             |
+| **Bedrock**             | Access/build GenAI apps using foundation models |
+| **Q Business**          | AI assistant for company employees              |
+| **Q Developer**         | AI assistant for developers/coding              |
+
+
+Easy memory:
+
+SageMaker → Your ML models
+Bedrock → Foundation models / GenAI
+Q Business → Employees
+Q Developer → Developers
+
+
+# 📡 Data Streaming & Storage
+| Service                  | Remember                               |
+| ------------------------ | -------------------------------------- |
+| **Kinesis Data Streams** | Real-time data streaming               |
+| **Data Firehose**        | Deliver streaming data to destinations |
+| **S3**                   | Huge-scale object storage / data lake  |
+
+
+# 📊 Data Analytics
+
+| Service               | Remember                                |
+| --------------------- | --------------------------------------- |
+| **Redshift**          | Data warehouse + large SQL analytics    |
+| **Glue**              | Data integration / ETL                  |
+| **Glue Data Catalog** | Stores data metadata                    |
+| **EMR**               | Big data processing with Spark/Hadoop   |
+| **Athena**            | SQL queries on data, especially S3      |
+| **QuickSight**        | Dashboards & data visualization         |
+| **OpenSearch**        | Search + real-time analytics/monitoring |
