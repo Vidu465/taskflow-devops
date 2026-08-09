@@ -460,3 +460,6 @@ Works like a central network hub.
 
 Creates, manages, and secures APIs.
 Handles API requests between applications and backend services.
+
+
+http://cloudops-inventory-vihara-2026.s3-website.ap-south-1.amazonaws.com/
