@@ -462,4 +462,160 @@ Creates, manages, and secures APIs.
 Handles API requests between applications and backend services.
 
 
-http://cloudops-inventory-vihara-2026.s3-website.ap-south-1.amazonaws.com/
+
+
+# AWS Cloud Practitioner – Storage Module 6 Summary.
+
+# 1. EC2 Instance Store ⚡
+
+Temporary block storage directly attached to the EC2 host.
+Very fast.
+Data is lost when the instance is stopped/terminated.
+Good for temporary data, cache, and scratch space.
+
+# 2. Amazon EBS 💾
+
+Persistent block storage for EC2.
+Can be attached/detached from EC2.
+Good for applications, databases, and operating systems.
+Supports EBS Snapshots for backups.
+
+# EBS Snapshots 📸
+
+Point-in-time backup of an EBS volume.
+Can restore data when needed.
+Later snapshots store only changed data (incremental).
+
+# Data Lifecycle Manager
+Automatically creates, retains, and deletes EBS snapshots according to a schedule.
+
+# 3. Amazon S3 🪣
+
+Object storage for almost any type of data.
+Highly scalable—you don't need to plan capacity.
+Great for images, videos, backups, documents, logs, etc.
+Has different storage classes based on how frequently data is accessed.
+
+# Important S3 features:
+
+Versioning → Keeps previous versions of objects.
+Buckets → Containers for storing objects.
+Storage Classes → Choose based on access frequency and cost.
+
+# 4. Amazon EFS 📁
+
+File storage mainly for Linux workloads.
+Multiple EC2 instances can access the same files.
+Automatically scales as data is added/removed.
+No capacity planning required.
+
+Multiple EC2 + shared Linux files = EFS
+
+# 5. Amazon FSx 🗂️
+
+Managed file systems for specific workloads:
+
+FSx for Windows File Server → Windows + SMB + Active Directory
+FSx for Lustre → High-performance computing
+FSx for OpenZFS → ZFS-based workloads
+FSx for NetApp ONTAP → Advanced Windows/Linux file management
+
+Specialized file system = FSx
+
+# 6. AWS Storage Gateway 🌉
+
+Connects on-premises storage with AWS storage.
+
+Useful for hybrid cloud environments.
+
+Types:
+S3 File Gateway → On-premises file access → S3
+Volume Gateway → On-premises applications use block storage
+Tape Gateway → Backup applications using virtual tapes
+
+
+| Part          | Possible AWS service   | What it does                         |
+| ------------- | ---------------------- | ------------------------------------ |
+| 🌐 Domain/DNS | **Route 53**           | `mycompany.com` → your application   |
+| ⚡ CDN         | **CloudFront**         | Delivers content quickly worldwide   |
+| 🎨 Frontend   | **S3 + CloudFront**    | Hosts static React/HTML/CSS/JS       |
+| ⚙️ Backend    | **EC2 / ECS / Lambda** | Runs your backend code               |
+| 🗄️ Database  | **RDS**                | Managed MySQL/PostgreSQL/etc.        |
+| 📁 Files      | **S3**                 | Images, videos, documents, backups   |
+| 🔐 Networking | **VPC**                | Private network for your resources   |
+| ⚖️ Traffic    | **Load Balancer**      | Distributes traffic across servers   |
+| 📈 Scaling    | **Auto Scaling**       | Adds/removes servers based on demand |
+| 📊 Monitoring | **CloudWatch**         | Logs and monitoring                  |
+
+
+
+# AWS Cloud Practitioner – Database Module 7 Summary.
+
+# 🗄️ 1. Amazon RDS
+
+Managed relational database service.
+Supports databases like MySQL, PostgreSQL, SQL Server.
+AWS handles tasks like backups, patching, and maintenance.
+
+RDS = Managed SQL database
+
+# ⚡ 2. Amazon Aurora
+
+AWS's cloud-native relational database.
+Compatible with MySQL and PostgreSQL.
+Designed for high performance and availability.
+
+Aurora = High-performance RDS
+
+# 🔄 3. AWS DMS
+
+Database Migration Service
+
+Moves databases from one environment to another.
+The source database can remain running during migration.
+
+DMS = Move databases
+
+# 4. Amazon DynamoDB
+
+NoSQL database.
+Flexible schema.
+Very fast performance at large scale.
+Good for applications needing massive scalability.
+
+# 5. Amazon ElastiCache
+
+Stores frequently used data in RAM.
+Makes applications faster.
+Reduces the number of requests sent to databases.
+
+ElastiCache = Faster applications through caching
+
+# 6. Amazon DocumentDB
+
+MongoDB-compatible document database.
+Stores flexible, JSON-like documents.
+Useful for catalogs, profiles, content, etc.
+
+DocumentDB = MongoDB-compatible documents
+
+# 7. AWS Backup
+
+Centralized backup service.
+Automates backup management across AWS services.
+Supports backup policies and monitoring.
+
+AWS Backup = Centralized automated backups
+
+# 8. Amazon Neptune
+
+Graph database.
+Designed for highly connected data and relationships.
+
+Example:
+
+Person → FRIEND → Person
+Person → WORKS_AT → Company
+Company → LOCATED_IN → Country
+
+Neptune = Relationships/connections
