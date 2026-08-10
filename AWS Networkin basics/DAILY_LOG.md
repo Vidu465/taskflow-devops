@@ -718,3 +718,47 @@ Least privilege = Give only the permissions needed.
 | **Amazon GuardDuty** | Detect **threats/suspicious activity** |
 | **Amazon Detective** | **Investigate** security incidents     |
 | **AWS Security Hub** | **Centralize security findings**       |
+
+
+
+
+# AWS Cloud Practitioner – Monitoring, Governance & Compliance Module 10 Summary.
+
+# 📊 Monitoring & Auditing
+
+| Service           | Easy way to remember                          |
+| ----------------- | --------------------------------------------- |
+| **CloudWatch**    | 📈 Monitor metrics, logs, alarms & dashboards |
+| **CloudTrail**    | 📜 **Who did what, where, and when?**         |
+| **AWS Config**    | 🔍 Check resource configurations/compliance   |
+| **Audit Manager** | 📋 Help with audits and compliance evidence   |
+
+
+# 🛡️ Security & Compliance
+
+| Service                 | Easy way to remember                     |
+| ----------------------- | ---------------------------------------- |
+| **AWS Artifact**        | 📄 AWS compliance reports & documents    |
+| **IAM Access Analyzer** | 🔐 Check permissions & least privilege   |
+| **AWS Health**          | 🏥 AWS service/account events and issues |
+
+
+# 🏢 Governance & Account Management
+
+| Service               | Easy way to remember                               |
+| --------------------- | -------------------------------------------------- |
+| **AWS Organizations** | 🏢 Manage multiple AWS accounts + OUs + billing    |
+| **Control Tower**     | 🗼 Set up & govern a multi-account AWS environment |
+| **Service Catalog**   | 📦 Approved AWS resources for self-service         |
+| **License Manager**   | 🔑 Manage software licenses                        |
+
+
+# 💰 Optimization
+
+AWS Trusted Advisor → Continuously checks your AWS environment and recommends improvements for:
+
+💰 Cost
+🔐 Security
+⚡ Performance
+🛡️ Fault tolerance/resilience
+📈 Service limits
