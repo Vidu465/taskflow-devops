@@ -762,3 +762,42 @@ AWS Trusted Advisor → Continuously checks your AWS environment and recommends 
 ⚡ Performance
 🛡️ Fault tolerance/resilience
 📈 Service limits
+
+
+
+
+# AWS Cloud Practitioner – Pricing & Support Module 11 Summary.
+
+# 💰 AWS Pricing
+
+Pay as you go → Pay only for what you use.
+Save when you commit → Get discounts by committing to usage.
+Pay less by using more → Higher usage can reduce per-unit cost.
+Main cost drivers: Compute, Storage, Outbound data transfer.
+
+
+# 📊 Cost Management
+
+| Service                 | Remember                                           |
+| ----------------------- | -------------------------------------------------- |
+| **Pricing Calculator**  | 💰 Estimate costs **before** deploying             |
+| **Cost Explorer**       | 📊 Analyze existing costs & usage                  |
+| **AWS Budgets**         | 🚨 Set budgets & receive alerts                    |
+| **AWS Billing Console** | 🧾 View/manage bills and charges                   |
+| **AWS Organizations**   | 🏢 Manage multiple accounts + consolidated billing |
+
+
+
+# 🆘 AWS Support & Help
+AWS Support Plans → Different levels of technical support.
+Enterprise Support → Highest support level for mission-critical workloads.
+AWS re:Post → Community Q&A.
+AWS Documentation → Official guides and tutorials.
+AWS Professional Services → AWS experts/consulting.
+Trust & Safety Center → Abuse, security, and safety guidance.
+
+# 🤝 AWS Partners
+
+AWS Partner Network (APN) → Companies that help customers build, market, sell, and implement AWS solutions.
+
+AWS Marketplace → Find and purchase third-party software and solutions that run on AWS.
