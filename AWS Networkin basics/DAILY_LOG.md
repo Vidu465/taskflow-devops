@@ -801,3 +801,223 @@ Trust & Safety Center → Abuse, security, and safety guidance.
 AWS Partner Network (APN) → Companies that help customers build, market, sell, and implement AWS solutions.
 
 AWS Marketplace → Find and purchase third-party software and solutions that run on AWS.
+
+
+
+
+
+# AWS Cloud Practitioner – Migration Module 12 Summary.
+
+
+# 1. 🚀 Three Migration Phases
+
+Think of a migration as:
+
+| Phase                   | What happens                                                         |
+| ----------------------- | -------------------------------------------------------------------- |
+| **Assess**              | 🔍 Understand current infrastructure, costs, applications            |
+| **Mobilize**            | 🛠️ Prepare the organization, people, processes, and AWS environment |
+| **Migrate & Modernize** | ☁️ Move workloads and improve/modernize them                         |
+
+
+# 2. 🏢 AWS Cloud Adoption Framework (CAF)
+
+AWS CAF helps an organization prepare for and organize its overall cloud adoption journey.
+
+CAF = How do we prepare the organization for cloud adoption?
+
+It considers areas such as People, Business, Security, Operations, Governance, and Platform.
+
+
+
+# 3. 🔥 The 7 Rs of Migration
+
+These are the seven strategies for what to do with each workload:
+
+| Strategy       | Meaning                                 |
+| -------------- | --------------------------------------- |
+| **Rehost**     | Move as-is → "Lift and shift"           |
+| **Replatform** | Move with small optimizations           |
+| **Refactor**   | Redesign/rebuild for the cloud          |
+| **Repurchase** | Replace with a different product        |
+| **Retain**     | Keep it where it is                     |
+| **Retire**     | Remove it because it's no longer needed |
+| **Relocate**   | Move to another AWS environment/service |
+
+
+# 4. 🔍 Migration Services
+
+| AWS Service                             | Remember                                                 |
+| --------------------------------------- | -------------------------------------------------------- |
+| **Migration Evaluator**                 | 💰 Build migration **business case & cost estimate**     |
+| **Application Discovery Service**       | 🔍 Discover servers, databases, dependencies             |
+| **Application Migration Service (MGN)** | 🔄 **Migrate applications**                              |
+| **Migration Hub**                       | 📊 Central place to **track migrations**                 |
+| **AWS DMS**                             | 🗄️ **Migrate databases**                                |
+| **AWS SCT**                             | 🔧 Convert database **schema/code**                      |
+| **AWS DataSync**                        | 📁 Fast automated **data transfer/synchronization**      |
+| **Transfer Family**                     | 📤 **SFTP / FTPS / FTP** file transfers                  |
+| **Direct Connect**                      | 🔌 Dedicated private network connection                  |
+| **Snow Family**                         | 📦 Physical devices for **large/offline data migration** |
+
+
+
+
+# 5. 🗄️ Database Migration
+
+AWS DMS
+
+DMS = Database Migration Service
+
+Used to migrate databases to AWS.
+
+Example:
+
+On-premises MySQL
+       ↓
+     AWS DMS
+       ↓
+Amazon RDS / Aurora
+
+
+# AWS SCT
+
+SCT = Schema Conversion Tool
+
+Used when you need to convert database schemas/code between database engines.
+
+Example:
+
+Oracle
+  ↓
+AWS SCT
+  ↓
+PostgreSQL
+🧠 Remember
+
+DMS → Move the database
+
+SCT → Convert the database
+
+
+# 6. 📁 Data Migration
+
+AWS DataSync
+
+Used for automated, fast, secure data transfers between on-premises storage and AWS.
+
+DataSync = Move lots of data over the network
+
+
+# AWS Transfer Family
+
+Used when you specifically need traditional file-transfer protocols:
+
+SFTP / FTPS / FTP → Transfer Family
+
+
+# AWS Snow Family
+
+Used when you have huge amounts of data and network transfer isn't practical.
+
+Snowball = Physically move the data 📦
+
+
+# 7. 🔌 Direct Connect
+
+AWS Direct Connect provides a dedicated private network connection between your on-premises environment and AWS.
+
+Your Data Center
+      │
+      │ Dedicated connection
+      ↓
+ AWS Direct Connect
+      ↓
+     AWS
+
+
+# ----------------------------------------------------------------------
+     CAF
+→ Organize the cloud adoption journey
+
+7 Rs
+→ Choose what to do with each workload
+
+Migration Evaluator
+→ 💰 Business case / cost
+
+Application Discovery
+→ 🔍 Discover infrastructure & dependencies
+
+Application Migration Service
+→ 🔄 Move applications
+
+Migration Hub
+→ 📊 Track migrations
+
+DMS
+→ 🗄️ Move databases
+
+SCT
+→ 🔧 Convert database schema/code
+
+DataSync
+→ 📁 Move/synchronize lots of data
+
+Transfer Family
+→ 📤 SFTP / FTPS / FTP
+
+Direct Connect
+→ 🔌 Dedicated private connection
+
+Snow Family
+→ 📦 Offline/huge data migration
+
+
+
+
+
+# AWS Cloud Practitioner – Development & Architecture Module 13 Summary.
+
+This module covers AWS developer tools, purpose-built services, IoT, the Well-Architected Framework, and serverless architecture.
+
+# 🛠️ Developer Services
+
+CodeBuild → Build, test, and package code.
+CodePipeline → Automate CI/CD pipelines.
+X-Ray → Monitor and troubleshoot applications.
+AppSync → Build GraphQL APIs connecting multiple data sources.
+Amplify → Quickly build and deploy full-stack applications.
+
+# 👥 Business & User Services
+
+Amazon Connect → Cloud-based customer service/contact center.
+Amazon SES → Send large volumes of emails.
+AppStream 2.0 → Stream individual applications to users.
+WorkSpaces → Provide complete virtual desktops.
+WorkSpaces Secure Browser → Secure access to web applications.
+
+# 🏭 IoT
+
+AWS IoT Core → Connect physical devices/sensors to AWS securely and collect their data.
+
+🏗️ Well-Architected Framework
+
+The 6 pillars are:
+
+⚙️ Operational Excellence
+🔐 Security
+🛡️ Reliability
+⚡ Performance Efficiency
+💰 Cost Optimization
+🌱 Sustainability
+
+Well-Architected Tool → Helps you review your AWS workload against these best practices.
+
+# ⚡ Serverless
+
+A common serverless architecture:
+
+API Gateway → Lambda → DynamoDB
+
+The key idea is that AWS manages the underlying servers/infrastructure, allowing developers to focus mainly on the application.
