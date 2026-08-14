@@ -1021,3 +1021,13 @@ A common serverless architecture:
 API Gateway → Lambda → DynamoDB
 
 The key idea is that AWS manages the underlying servers/infrastructure, allowing developers to focus mainly on the application.
+
+
+
+# ⚡ Serverless
+
+A common serverless architecture:
+
+API Gateway → Lambda → DynamoDB
+
+The key idea is that AWS manages the underlying servers/infrastructure, allowing developers to focus mainly on the application.
